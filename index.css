@@ -1,0 +1,329 @@
+.titulo {
+    animation: titulo 1s linear infinite alternate;
+}
+@keyframes titulo {
+    from {
+        scale: 1;
+    }
+    to {
+        scale: .95;
+    }
+}
+
+h1,h2 {
+    width: 100%;
+    text-align: center;
+}
+h1 {
+    margin-top: .4em;
+    font-size: 4rem;
+}
+h1 .t1 {
+    color: #a8009c;
+}
+h1 .t2 {
+    color: #2e7df3;
+}
+h2 {
+    font-size: 1.5rem;
+    padding-block: .5em 1em;
+    color: #5b005a;
+    margin-bottom: .5rem;
+}
+
+.anuncion-fecha {
+    text-align: center;
+    color: #bd0052;
+    font-size: 1.5rem;
+    text-shadow: 0px 0px 5px white;
+    margin-bottom: .5em;
+    padding-inline: 1em;
+}
+
+#spanTemporizador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: 50px;
+    text-align: center;
+    overflow: hidden;
+    margin: 0 auto;
+    color: #7000c6;
+    text-shadow: 0px 0px 5px white;
+    font-size: 1.2rem;
+    line-height: 1.2em;
+    padding-inline: 1em;
+}
+
+#numerosSobrantes {
+    text-align: center;
+    padding: 2em 2em 1em 2em;
+    font-size: 1.2rem;
+    color: #6400ce;
+    text-shadow: 0px 0px 10px white;
+}
+
+.aviso-toca {
+    text-align: center;
+    padding: .5em 1em .7em 1em;
+    color: #70006e;
+    font-size: 1.3rem;
+}
+
+.aviso-numeros {
+    font-size: .9rem;
+    text-align: center;
+    padding: 0em 2em 2em 2em;
+    opacity: .6;
+}
+
+#tabla {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 100%;
+    max-width: 400px;
+    gap: 1em;
+    margin: 0 auto;
+    padding: 0em 2em 2em 2em;
+}
+
+#tabla span {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #5b125a;
+    font-weight: bold;
+    width: 40px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: rgb(227, 227, 227);
+    box-shadow: 0px 0px 5px 1px #5b125a;
+    font-size: 1rem;
+}
+
+#tabla span.sin-vender {
+    background-color: white;
+    box-shadow: 0px 0px 10px 1px rgb(0, 255, 213);
+    font-size: 1.2rem;
+    animation: numeros 1s linear infinite alternate;
+    cursor: pointer;
+}
+@keyframes numeros {
+    from {
+        box-shadow: 0px 0px 0px 1px rgb(0, 255, 213);
+    }
+    to {
+        box-shadow: 0px 0px 30px 1px rgb(0, 255, 213);
+    }
+}
+#tabla span:not(.sin-vender):after {
+    content: 'X';
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: normal;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 2em;
+    opacity: 0.2;
+    color: #5b125a;
+}
+
+.div-precio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    margin: 1.5em auto;
+}
+.div-precio .div-valor,
+.div-precio .metodo-pago {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .4em;
+    background-color: #a8009c;
+    border-radius: 2em;
+    font-size: 1.2rem;
+    padding: .6em 1.2em;
+    color: white;
+    max-width: fit-content;
+}
+
+.div-precio .div-valor {
+    animation: div-valor 1.5s linear infinite alternate;
+}
+@keyframes div-valor {
+    from {
+        scale: 1;
+    }
+    to {
+        scale: 1.1;
+    }
+}
+.div-precio .metodo-pago {
+    padding-block: 2em;
+    max-width: 400px;
+}
+.div-precio .metodo-pago .span-nequi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5em;
+    font-size: 1.5rem;
+}
+.div-precio .metodo-pago .span-nequi .logo-nequi {
+ width: 40px;
+}
+.div-precio .metodo-pago .qr {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 1em;
+}
+
+.div-precio .metodo-pago .informacion {
+    margin-top: 1em;
+    text-align: center;
+}
+.div-precio .metodo-pago .numero-celular {
+    color: #fffc00;
+    font-size: 1.4rem;
+}
+.div-precio .metodo-pago .enlace {
+    cursor: pointer;
+    font-size: 1.4rem;
+    text-align: center;
+    color: lawngreen;
+}
+
+.div-contenedor-detalles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.div-detalles {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 900px;
+    padding: 1em;
+    gap: 1em;
+    line-height: 1.2em;
+    font-size: 1.2rem;
+    color: #8d4bd3;
+    text-wrap: balance;
+}
+
+.div-detalles span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    border-radius: 2em;
+    padding: 1em;
+}
+
+.div-detalles .div-imagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background-color: #a978dd;
+    color: white;
+    border-radius: 2em;
+    padding: 1em;
+}
+.div-detalles .div-imagen h3 {
+    text-align: center;
+}
+.div-detalles .div-imagen img {
+    width: 100px;
+}
+
+#contenedorMensaje {
+    position: sticky;
+    display: none;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(239, 232, 255);
+    z-index: 1000;
+    padding: 1em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .8em;
+}
+#contenedorMensaje.on {
+    display: flex;
+}
+#contenedorMensaje * {
+    width: fit-content;
+    text-align: center;
+}
+#contenedorMensaje .titulo-mensaje {
+    font-size: 1.1rem;
+    text-align: center;
+    color: #8d4bd3;
+}
+
+#contenedorMensaje .aviso-mensaje {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .9rem;
+    opacity: .6;
+}
+
+#contenedorMensaje  #contenedorNumerosAviso {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: .7em;  
+}
+
+#contenedorMensaje  #contenedorNumerosAviso .numero-aviso {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5em;
+    background-color: white;
+    box-shadow: 0px 0px 5px 1px #00ffd5;
+    border-radius: 50%;
+    width: max-content;
+    aspect-ratio: 1/1;
+    color: #5b125a;
+}
+
+#contenedorMensaje a {
+    border: none;
+    outline: none;
+    background-color: #8b0089;
+    color: white;
+    border-radius: 2em;
+    padding: .5em 1em;
+    text-decoration: none;
+}
+
+@media (min-width: 768px) {
+    #tabla {
+        grid-template-columns: repeat(10, 1fr);
+        max-width: 800px;
+    }
+
+    .div-detalles {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6em;
+    }
+}
