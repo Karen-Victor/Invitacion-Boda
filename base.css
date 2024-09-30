@@ -1,3 +1,11 @@
+@font-face {font-family: 'Central';src: url('font/Updock-Regular.ttf');font-display: swap;}
+@font-face {font-family: 'Titulo';src: url('font/Filxgirl.TTF');font-display: swap;}
+@font-face {font-family: 'Subtitulo';src: url('font/PlaywriteDEGrund-Regular.ttf');font-display: swap;}
+@font-face {font-family: 'Lectura';src: url('font/Quicksand-Regular.ttf');font-display: swap;}
+@font-face {font-family: 'Frase';src: url('font/Do\ It\ with\ Love.otf');font-display: swap;}
+
+
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -69,6 +77,7 @@ body {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     width: 100%;
     overflow-x: hidden;
+    padding: 1em;
 }
 body::before {
     content: '';
@@ -84,4 +93,52 @@ body::before {
     z-index: -1;
     filter: blur(7px);
     opacity: 0.2;
+}
+
+h1 {
+    font-family: 'Titulo';
+    font-size: 5rem;
+    text-align: center;
+    padding-block: 1em;
+    line-height: .8em;
+}
+
+h2 {
+    font-family: 'Subtitulo';
+    font-size: 2rem;
+    text-align: center;
+    line-height: 1.5em;
+}
+
+p {
+    font-family: 'Lectura';
+    font-weight: bold;
+    line-height: 1.4em;
+}
+
+.frase {
+    font-family: 'Titulo';
+    font-size: 3rem;
+    line-height: .9em;
+    text-align: center;
+}
+
+.texto-central {
+    font-family: 'Central';
+    font-size: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-block: .6em .3em;
+    box-shadow: 0px 0px 10px 1px red;
+    border-radius: 50%;
+
+    span:nth-child(1){
+        line-height: .5em;
+    }
+
+    span:nth-child(2){
+        font-size: 4.5rem;
+    }
 }
