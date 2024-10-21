@@ -121,6 +121,7 @@ span {
         font-size: 3rem;
         text-align: center;
         line-height: .8em;
+        color: #8500ff;
     }
 
     .foto-propuesta {
@@ -134,6 +135,11 @@ span {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        
+        span {
+            color: #a400ff;
+            /* text-shadow: 0px 0px 3px black; */
+        }
     
         span:nth-child(1){
             line-height: .2em;
@@ -149,9 +155,10 @@ span {
         font-size: 2.2rem;
         line-height: .9em;
         text-align: center;
-        background-color: rgba(255, 255, 255, 0.5);
+        background-color: rgba(255, 255, 255, 0.7);
         padding: .5em;
         border-radius: 1em;
+        color: #9574e3;
     }
 }
 
@@ -436,6 +443,7 @@ span {
         .titulo {
             font-family: 'subtitulo';
             font-size: 1.2rem;
+            color: #8500d2;
         }
 
         .contenedor-frase {
@@ -543,6 +551,7 @@ span {
     .titulo {
         font-family: 'subtitulo';
         font-size: 1.5rem;
+        color: #8500d2;
     }
 
     .contenedor-orden {
@@ -638,6 +647,7 @@ span {
     .titulo {
         font-family: 'subtitulo';
         font-size: 1.5rem;
+        color: #8500d2;
     }
 
     img {
@@ -690,6 +700,7 @@ span {
         font-size: 1.8rem;
         margin-bottom: 1em;
         text-align: center;
+        color: #8500d2;
     }
 
     .contenedor-general {
@@ -729,6 +740,175 @@ span {
             text-align: center;
             font-weight: bold;
             color: #685d7e;
+        }
+    }
+}
+
+.seccion-confirmacion {
+    .petalos {
+        position: absolute;
+        rotate: -65deg;
+        width: 150%;
+        height: auto;
+        left: -75%;
+        opacity: .5;
+    }
+    .flor1 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        z-index: -1;
+    }
+    .flor2 {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 25%;
+        z-index: -1;
+    }
+    .flor3 {
+        position: absolute;
+        bottom: 0;
+        right: 0%;
+        width: 15%;
+        z-index: -1;
+    }
+
+    .titulo {
+        font-family: 'subtitulo';
+        font-size: 1.8rem;
+        text-align: center;
+        color: #8500d2;
+    }
+
+    .contenedor-mensaje {
+        position: relative;
+        aspect-ratio: 1/1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+        padding: 3.9em;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            filter: hue-rotate(292deg) brightness(1.5);
+            opacity: .3;
+        }
+
+        span {
+            font-family: 'lectura';
+            text-align: center;
+            font-size: 1.05rem;
+        }
+    }
+
+    .contenedor-asistencia {
+        .contenedor-calendario {
+            display: grid;
+            grid-template-columns: 1fr 50px;
+            padding: 1em 2em;
+            background-color: #caaeff7d;
+            border-radius: 2em;
+            margin-bottom: 2em;
+            gap: .5em;
+
+            span {
+                text-align: center;
+            }
+        }
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            text-decoration: none;
+            box-shadow: 0px 0px 10px 0px #8c52ff;
+            padding: .7em;
+            border-radius: 1em;
+            font-size: 1.2rem;
+            color: #8c52ff;
+            gap: .5em;
+            background-color: rgba(177, 232, 255, 0.345);
+
+            img {
+                width: 30px;
+            }
+        }
+    }
+    
+}
+
+.seccion-fin {
+    .manchitas {
+        position: absolute;
+        width: 70%;  
+    }
+    .florecitas{
+        position: absolute;
+        width: 30%;  
+    }
+    .manchitas.mancha-1 {
+        left: 0;
+        top: 0;
+        transform: translateX(-30%) translateY(-30%);
+    }
+    .florecitas.flor-1 {
+        left: 2%;
+        top: 2%;
+    }
+    .manchitas.mancha-2 {
+        right: 0;
+        bottom: 0;
+        transform: translateX(30%) translateY(40%);
+    }
+    .florecitas.flor-2 {
+        right: 2%;
+        bottom: 2%;
+    }
+
+    .tulipan {
+        position: absolute;
+        width: 20%;
+    }
+
+    .tulipan-1 {
+        top: 0;
+        right: 0;
+    }
+    .tulipan-2 {
+        bottom: 0;
+        left: 0;
+    }
+
+    .contenedor-general {
+        position: relative;
+        aspect-ratio: 1/1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 3em;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        span {
+            font-family: 'subtitulo';
+            font-size: 1.5rem;
+            color: #8500d2;
         }
     }
 }
