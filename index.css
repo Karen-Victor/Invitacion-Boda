@@ -8,6 +8,10 @@
     --transparencia-adorno-1: .7;
 }
 
+html {
+    color-scheme: light;
+  }
+
 body {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: rgb(24, 24, 24);
