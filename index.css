@@ -333,22 +333,155 @@ span {
     }
 }
 
-/* body {
-    position: relative;
-    min-height: 100dvh;
-    background: linear-gradient(180deg, rgba(227,167,255,.5) -0%, rgba(228,240,255,1) 100%);
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    width: 100%;
-    overflow-x: hidden;
-    padding: 1em;
-}
-
- h2 {
-        font-family: 'Subtitulo';
-        font-size: 2rem;
-        text-align: center;
-        line-height: 1.5em;
+.seccion-invitacion {
+    .manchitas {
+        position: absolute;
+        width: 70%;  
+    }
+    .florecitas{
+        position: absolute;
+        width: 30%;  
+    }
+    .manchitas.mancha-1 {
+        left: 0;
+        top: 0;
+        transform: translateX(-30%) translateY(-30%);
+    }
+    .florecitas.flor-1 {
+        left: 2%;
+        top: 2%;
+    }
+    .manchitas.mancha-2 {
+        right: 0;
+        bottom: 0;
+        transform: translateX(30%) translateY(40%);
+    }
+    .florecitas.flor-2 {
+        right: 2%;
+        bottom: 2%;
     }
 
+    .contenedor-general {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50% 50% 0px 0px;
+        padding: 3em 1.5em;
+        background-color: rgba(213, 145, 255, 0.3);
+        text-align: center;
+        gap: 2.3em;
 
-*/
+        .flor1 {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            rotate: 90deg;
+            transform: translateY(-30%);
+        }
+
+        .flor2 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40%;
+            transform: translateX(-30%) translateY(30%);
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: calc(100% + 1em);
+            height: calc(100% + 1em);
+            transform: translateX(-.5em) translateY(-.5em);
+            border: 1px solid #d591ff;
+            border-radius: 50% 50% 0px 0px;
+        }
+
+        .contenedor-letras-anillo {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 40%;
+
+            .letras {
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+
+                img {
+                    width: 100%;
+
+                    &:nth-child(1) {
+                        transform: translateY(-25%) translateX(25%);
+                    }
+                }
+            }
+
+            .anillos {
+                width: 70%;
+            }
+        }
+
+        .titulo {
+            font-family: 'subtitulo';
+            font-size: 1.2rem;
+        }
+
+        .contenedor-frase {
+            display: flex;
+            flex-direction: column;
+            gap: .3em;
+
+            .frase {
+                font-family: 'lectura';
+                font-size: 1.1rem;
+            }
+        }
+
+        .contenedor-fecha {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: .8em;
+            font-family: 'subtitulo';
+
+            .contador {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: .5em;
+
+                .contenedor-digito {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    box-shadow: 0px 0px 10px 1px #8c52ff;
+                    aspect-ratio: 1/1;
+                    width: 100%;
+                    padding: .3em;
+                    gap: .4em;
+                    border-radius: .5em;
+
+                    .titulo {
+                        font-size: .6rem;
+                        color: #3a3a3a;
+                    }
+
+                    .digito {
+                        font-size: 1.3rem;
+                        color: #8c52ff;
+                    }
+                }
+            }
+        }
+    }
+}
