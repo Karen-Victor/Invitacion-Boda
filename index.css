@@ -320,6 +320,7 @@ span {
             border-radius: 2em;
             width: 100%;
             object-fit: cover;
+            box-shadow: 0px 0px 3px 1px #8c52ff;
         }
         .otras-fotos {
             display: grid;
@@ -400,6 +401,7 @@ span {
             transform: translateX(-.5em) translateY(-.5em);
             border: 1px solid #d591ff;
             border-radius: 50% 50% 0px 0px;
+            z-index: -1;
         }
 
         .contenedor-letras-anillo {
@@ -483,5 +485,32 @@ span {
                 }
             }
         }
+
+        .contenedor-lugar {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: .7em;
+
+            .titulo {
+                font-family: 'subtitulo';
+            }
+            .lugar {
+                font-family: 'lectura';
+            }
+            a {
+                text-decoration: none;
+                box-shadow: 0px 0px 10px 0px #8c52ff;
+                padding: .7em;
+                border-radius: 1em;
+                font-size: 1.2rem;
+                color: #8c52ff;
+            }
+        }
     }
+}
+
+.seccion-orden {
+
 }
