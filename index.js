@@ -1,4 +1,24 @@
 function Init(){
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    },{
+        rootMargin: '-20% 0%',
+        threshold: 0
+    });
+
+    contenedorPorCargar.querySelectorAll('section').forEach(seccion => {
+        observer.observe(seccion);
+    });
+
+    window.addEventListener('load',()=>{
+        contenedorPorCargar.classList.add('on');
+        seccionCargando.classList.add('ocultar');
+    });
 
     function calcularTiempoRestante() {
         const ahora = new Date();
